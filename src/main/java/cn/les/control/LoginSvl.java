@@ -28,14 +28,14 @@ public class LoginSvl extends HttpServlet {
                 request.getRequestDispatcher("/WEB-INF/main/main.jsp").forward(request, response);
             }else {
                 request.setAttribute("msg","用户名或密码输入错误");
-                request.getRequestDispatcher("WEB-INF/main/login.jsp").forward(request, response);
+                request.getRequestDispatcher("/WEB-INF/main/login.jsp").forward(request, response);
             }
 
 
         } catch (Exception e) {
             e.printStackTrace();
             request.setAttribute("errorMsg","网络异常，请联系管理员！");
-            request.getRequestDispatcher("WEB-INF/error/error.jsp").forward(request,response);
+            request.getRequestDispatcher("/WEB-INF/error/error.jsp").forward(request,response);
 
         }
     }
