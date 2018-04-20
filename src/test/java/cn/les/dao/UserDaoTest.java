@@ -1,5 +1,6 @@
 package cn.les.dao;
 
+import cn.les.biz.UserBiz;
 import cn.les.entity.TUser;
 import cn.les.util.Log;
 import org.junit.Before;
@@ -20,53 +21,41 @@ import static org.testng.Assert.*;
 public class UserDaoTest {
 
 
-    @Test(enabled = true)
+    @Test
     public void testLoginSuccess1() throws Exception {
         String uname = "admin";
         String pwd = "admin";
         UserDao dao = new UserDao();
         TUser user = null;
-        try {
-            user = dao.login(uname, pwd);
-            System.out.println(user.getuName() + " login Success");
-        } catch (Exception e) {
-            Log.getLogger().error(e.getMessage());
+        user = dao.login(uname.trim(), pwd.trim());
+        if (user != null) {
+            Assert.assertEquals(true, true);
         }
-
-        Assert.assertEquals(true, true);
     }
 
-    @Test(enabled = true)
+    @Test
     public void testLoginSuccess2() throws Exception {
         String uname = "test";
         String pwd = "test";
         UserDao dao = new UserDao();
         TUser user = null;
-        try {
-            user = dao.login(uname, pwd);
-            System.out.println(user.getuName() + " login Success");
-        } catch (Exception e) {
-            Log.getLogger().error(e.getMessage());
+        user = dao.login(uname.trim(), pwd.trim());
+        if (user != null) {
+            Assert.assertEquals(true, true);
         }
 
-        Assert.assertEquals(true, true);
     }
 
-    @Test(enabled = true)
+    @Test
     public void testLoginSuccess3() throws Exception {
         String uname = "edward";
         String pwd = "edward";
         UserDao dao = new UserDao();
         TUser user = null;
-        try {
-            user = dao.login(uname, pwd);
-            System.out.println(user.getuName() + " login Success");
-        } catch (Exception e) {
-            Log.getLogger().error(e.getMessage());
+        user = dao.login(uname.trim(), pwd.trim());
+        if (user != null) {
+            Assert.assertEquals(true, true);
         }
-
-        Assert.assertEquals(true, true);
     }
-
 
 }

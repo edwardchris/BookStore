@@ -13,7 +13,7 @@
 <html>
 <head>
     <base href="<%=basePath%>">
-    <title>Title</title>
+    <title>登录页</title>
     <script type="text/javascript">
 
         function tijiao(){
