@@ -41,11 +41,12 @@ public class UserDao extends BaseDao {
             tUser.setuName(uName);
             tUser.setPwd(pwd);
             tUser.setRole(rs.getInt("role"));
-
             break;
         }
         rs.close();
         ps.close();
         return tUser;
     }
+
+
 }
